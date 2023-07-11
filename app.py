@@ -15,7 +15,7 @@ page_bg_img = """
     
 with st.sidebar: 
     st.image("https://newtomstestbucket2.s3.amazonaws.com/FONDO_AZUL_LETRAS__AZUL_CLARO-removebg-preview.png")
-    st. header("GenAI Contect Analyzer")
+    st. header("GenAI Content Analyzer")
     st.selectbox('Select the count of auto-promts to consider', ['1', '2','3'])
 
     st. header("Generated auto-prompts")
