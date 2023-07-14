@@ -7,29 +7,38 @@ st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
     
 with st.sidebar: 
     st.image("logonewtoms_remove.png")
-    st.selectbox('Select the count of auto-prompts to consider', ['1', '2','3'])
+    st.selectbox('Select the number of Suggested Prompts', ['1', '2','3','None'])
 
-    st. header("Generated auto-prompts")
-    st.write("1. What type of furniture is in the room?")
-    st.write("2. How does the room's decor reflect the homeowner's personality")
-
-with st.container():
-    st.image("GenAI Contect Analyzer (4).png")
+    st. header("Suggested Prompts:")
+    st.write("1.")
+    st.write("2.")
+    st.write("3.")
 
 with st.container():
-    st.subheader ("Instructions:")
+    st.image("GenAI Contect Analyzer (6).png")
+
+with st.container():
+    st.subheader ("Follow the instructions:")
+
+
+col1, col2=st.columns(2)
+
+with col1:
     st.write(
         """
-        1. Browse ans select an input file in one of the supported formats.
-        2. Select and output language, default is English.
-        3. Click Upload button.
-        4. You will see a text summary.
-        5. Type your query in the search bar to get more insights.
+        
+        1. Upload your file in the proper format (PDF, .csv, .xlsx, .jpg, .png).
+        2. Specify the output language.
+        3. Enter a natural language request in the search bar.
+        5. Click the send button.
+        6. You will get a response to the query
         """
     )
+
+with col2:
     st.file_uploader("Select file")
-
     st.selectbox('Select and output Language', ['English', 'Spanish'])
+    
 
-    st.text_input('What insights would you like?') 
-    st.button('Upload')
+st.text_input('Enter a request here:') 
+st.button('Send')
